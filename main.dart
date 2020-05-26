@@ -4,4 +4,6 @@ String formatTimeOfDay(TimeOfDay tod) {
     return format.format(dt);
 }
 
+intl: ^0.16.1
+
 famtech 
