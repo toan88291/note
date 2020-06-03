@@ -15,7 +15,7 @@ import 'dart:developer' as developer;
 class $NAME$ extends StatefulWidget {
   static const ROUTE_NAME = '$NAME$';
   @override
-  $NAME$State createState() => $NAME$State();
+  _$NAME$State createState() => _$NAME$State();
 }
 
 class _$NAME$State extends State<$NAME$> {
