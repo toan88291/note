@@ -10,20 +10,23 @@ intl: ^0.16.1
 /////////////////  Live Template StateFulWidget //////////////
     
 import 'package:flutter/material.dart';
+import 'dart:developer' as developer;
 
 class $NAME$ extends StatefulWidget {
+  static const ROUTE_NAME = '$NAME$';
   @override
-  _$NAME$State createState() => _$NAME$State();
+  $NAME$State createState() => $NAME$State();
 }
 
 class _$NAME$State extends State<$NAME$> {
+  static const TAG = '$NAME$';
   @override
   Widget build(BuildContext context) {
     return Container($END$);
   }
 }
 
-- capitalize(underscoresToCamelCase(fileNameWithoutExtension()))
+- NAME: capitalize(underscoresToCamelCase(fileNameWithoutExtension()))
     
 ///////////////. Live Template StateLessWidget //////////////
     
@@ -35,6 +38,33 @@ class $NAME$ extends StatelessWidget {
     return Container();
   }
 }
-- capitalize(underscoresToCamelCase(fileNameWithoutExtension()))
-///////////////////////////////////////////////////////////////
+- NAME: capitalize(underscoresToCamelCase(fileNameWithoutExtension()))
+    
+/////////////////////////// Json Serializable ////////////////////
+    
+import 'package:json_annotation/json_annotation.dart';
+part '$FILE$.g.dart';
 
+@JsonSerializable()
+class $NAME$ {
+    factory $NAME$.fromJson(Map<String, dynamic> json) => _$$$NAME$FromJson(json);
+
+    Map<String, dynamic> toJson() => _$$$NAME$ToJson(this$END$);
+}
+- FILE: fileNameWithoutExtension()
+- NAME: capitalize(camelCase(fileNameWithoutExtension()))
+
+///////////////////////////// log  //////////////////////////
+    
+developer.log('$METHOD_NAME$', name: TAG);
+- METHOD_NAME: dartMethodName()
+    
+///////////////////////////// log (paramter) //////////////////////////
+    
+developer.log('$METHOD_NAME$ $METHOD_PARAMS$', name: TAG);
+
+- METHOD_NAME: dartMethodName()
+
+- METHOD_PARAMS: dartMethodParameters()
+    
+///////////////////////////////////////////////////////
