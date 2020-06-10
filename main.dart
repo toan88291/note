@@ -1,4 +1,13 @@
 tạm biệt anh nhé , chắc em phải ra đi .
+    
+///////////////get size Stack //////////
+Stack(
+  key: _commonContainerKey,
+    ...
+    final RenderBox renderBox = _commonContainerKey.currentContext.findRenderObject();
+    double width = renderBox.size.width;
+    ...
+)
 ///////////////// Convert time ////////////////////////////////
 String formatTimeOfDay(TimeOfDay tod) {
     final dt = DateTime(tod.hour, tod.minute);
