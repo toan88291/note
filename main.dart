@@ -1,6 +1,8 @@
 ////////////////////Plugin ////////////
 Flutter Enhancement suite
 Flutter Intl
+///////////////////////////////
+ flutter pub run build_runner build --delete-conflicting-outputs
 ///////////////get size Stack //////////
 Stack(
   key: _commonContainerKey,
