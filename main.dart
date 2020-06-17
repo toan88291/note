@@ -80,4 +80,23 @@ developer.log('$METHOD_NAME$ $METHOD_PARAMS$', name: TAG);
 
 - METHOD_PARAMS: dartMethodParameters()
     
-///////////////////////////////////////////////////////
+///////////////////////////convert datetime firebase////////////////////////////
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:json_annotation/json_annotation.dart';
+
+class TimestampConvertDatetime  implements JsonConverter<DateTime, Timestamp> {
+  const TimestampConvertDatetime();
+  @override
+  DateTime fromJson(Timestamp json) {
+    return json.toDate();
+  }
+
+  @override
+  Timestamp toJson(DateTime object) {
+    if (object == null) {
+      return null;
+    } else {
+      return Timestamp.fromDate(object);
+    }
+  }
+}
