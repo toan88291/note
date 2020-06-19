@@ -100,3 +100,16 @@ class TimestampConvertDatetime  implements JsonConverter<DateTime, Timestamp> {
     }
   }
 }
+/////////funtion callback /////
+void scheduleReload() {
+    SchedulerBinding.instance.scheduleFrameCallback(tick);
+  }
+  void tick(Duration timestamp) {
+    Future.delayed(const Duration(milliseconds: 60000), () {
+      if(!mounted) {
+        return;
+      }
+      _checkGps();
+      scheduleReload();
+    });
+  }
