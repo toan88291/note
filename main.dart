@@ -113,3 +113,7 @@ void scheduleReload() {
       scheduleReload();
     });
   }
+Future.doWhile(() async {
+      setState(() {});
+      await Future.delayed(const Duration(milliseconds: 50));
+});
