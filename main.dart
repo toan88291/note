@@ -1,3 +1,9 @@
+//////////////////////////////////
+cd ios/
+  pod cache clean --all
+  pod deintegrate --verbose
+  pod setup --verbose
+  pod install --verbose
 ////////////////////Plugin ////////////
 Flutter Enhancement suite
 Flutter Intl
