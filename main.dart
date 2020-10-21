@@ -1,3 +1,20 @@
+//////////////////// notifi channel///////////////
+        val channelId = getString(R.string.notification_channel_name)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channelName: CharSequence = getString(R.string.notification_channel_name)
+            val importance: Int = NotificationManager.IMPORTANCE_HIGH
+            val notificationChannel = NotificationChannel(channelId, channelName, importance)
+            notificationChannel.enableLights(true)
+            notificationChannel.enableVibration(true)
+            notificationChannel.setVibrationPattern(longArrayOf(100, 200, 300, 400, 500, 400, 300, 200, 400))
+            notificationManager.createNotificationChannel(notificationChannel)
+        }
+        val mBuilder = NotificationCompat.Builder(applicationContext, channelId)
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentTitle("Test")
+                .setContentText("You see me!")
+                .setAutoCancel(true)
+        notificationManager.notify(0, mBuilder.build())
 //////////////////////////////////
 cd ios/
   pod cache clean --all
