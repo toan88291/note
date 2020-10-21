@@ -15,6 +15,14 @@
                 .setContentText("You see me!")
                 .setAutoCancel(true)
         notificationManager.notify(0, mBuilder.build())
+                
+        <meta-data
+              android:name="io.flutter.embedding.android.SplashScreenDrawable"
+              android:resource="@drawable/launch_background"
+      />
+  <string name="notification_channel_name">channel_name</string>
+    <string name="notification_channel_description">123</string>
+    <string name="default_notification_channel_id">CHANNEL_ID</string>
 //////////////////////////////////
 cd ios/
   pod cache clean --all
