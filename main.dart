@@ -1,3 +1,5 @@
+/////// intl generate 
+pub global run intl_utils:generate
 //////////////////// notifi channel///////////////
         val channelId = getString(R.string.notification_channel_name)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
