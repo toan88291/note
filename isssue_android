@@ -1,0 +1,8 @@
+/// Duplicate class com.google.protobuf.AbstractMessageLite found in modules      protobuf-java-3.7.1.jar
+- android {
+  ...
+  configurations {
+        implementation.exclude module:'protobuf-lite'
+  }
+}
+/// 
