@@ -1,3 +1,47 @@
+////////state bloc /////////////
+part of '$FILE$.dart';
+
+abstract class $NAME${
+  Data data;
+  $NAME$({this.data});
+}
+
+class InitState extends $NAME${
+  InitState({Data data}) : super(data: data);
+}
+
+class Data {
+
+  String value;
+
+  Data(
+      {
+        this.value,
+      });
+
+  Data copyWith(
+      {
+        String value,
+      }) =>
+      Data(
+          value: value ?? this.value,
+      );
+}
+
+-File : concat(substringBefore(fileName(),"_"),"_cubit")
+-Name : capitalize(camelCase(fileNameWithoutExtension()))
+        
+////////cubit bloc /////////////
+import 'package:flutter_bloc/flutter_bloc.dart';
+part '$FILE$.dart';
+
+class $NAME$ extends Cubit<$STATE$>{
+    $NAME$($STATE$ state) : super(state);
+}
+
+-File : concat(substringBefore(fileName(),"_"),"_state")
+-Name : capitalize(camelCase(fileNameWithoutExtension()))
+-State : concat(capitalize(camelCase(substringBefore(fileName(),"_"))),"State")
 /////// intl generate 
 pub global run intl_utils:generate
 //////////////////// notifi channel///////////////
