@@ -1,3 +1,6 @@
+//// call function of parrent /////
+context.findAncestorWidgetOfExactType<ParrentWidget>()?.function();
+
 ////////state bloc /////////////
 part of '$FILE$.dart';
 
