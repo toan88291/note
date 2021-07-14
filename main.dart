@@ -31,7 +31,7 @@ class Data {
       );
 }
 
--File : concat(substringBefore(fileName(),"_"),"_cubit")
+-File : substringBefore(regularExpression(fileName(),"_state","_cubit"),".")
 -Name : capitalize(camelCase(fileNameWithoutExtension()))
         
 ////////cubit bloc /////////////
@@ -42,9 +42,9 @@ class $NAME$ extends Cubit<$STATE$>{
     $NAME$($STATE$ state) : super(state);
 }
 
--File : concat(substringBefore(fileName(),"_"),"_state")
+-File : concat(substringBefore(regularExpression(fileName(),"_cubit",""),"."),"_state")
 -Name : capitalize(camelCase(fileNameWithoutExtension()))
--State : concat(capitalize(camelCase(substringBefore(fileName(),"_"))),"State")
+-State : concat(capitalize(camelCase(substringBefore(regularExpression(fileName(),"_cubit",""),"."))),"State")
 /////// intl generate 
 pub global run intl_utils:generate
 //////////////////// notifi channel///////////////
