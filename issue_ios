@@ -1,0 +1,8 @@
+
+### warning: 'openURL:' is deprecated: first deprecated in iOS 10.0 and  architecture i386
+
+target.build_configurations.each do |config|
+    if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 9.0
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+    end
+end
