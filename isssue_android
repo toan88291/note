@@ -1,3 +1,9 @@
+/// Execution failed for task ':app:lintVitalRelease'
+lintOptions {
+    disable 'InvalidPackage'
+    checkReleaseBuilds false
+}
+
 /// Duplicate class com.google.protobuf.AbstractMessageLite found in modules      protobuf-java-3.7.1.jar
 - android {
   ...
