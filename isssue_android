@@ -12,3 +12,4 @@ lintOptions {
   }
 }
 /// 
+./gradlew wrapper --gradle-version=7.5
