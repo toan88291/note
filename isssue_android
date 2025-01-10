@@ -13,3 +13,5 @@ lintOptions {
 }
 /// 
 ./gradlew wrapper --gradle-version=7.5
+
+flutter config --jdk-dir  /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/home
