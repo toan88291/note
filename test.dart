@@ -8,7 +8,7 @@ import 'package:loxo/screens/vocabulary/widgets/topic_item.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'dart:developer' as developer;
-//asdassssssss
+//asdasssssss haha
 class VocabularyScreen extends StatefulWidget {
   final Topic topic;
 
